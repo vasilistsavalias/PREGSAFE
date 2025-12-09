@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: pregsafe-r-service
+    env: docker
+    dockerfilePath: ./r_service/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000

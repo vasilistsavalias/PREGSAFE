@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Claude Palette - Light Mode */
+    --claude-cyan: 0.80 0.18 180;
+    --claude-blue: 0.65 0.22 260;
+    --claude-light-bg: 0.98 0.006 240;
+    --claude-light-fg: 0.10 0.03 240;
+    --claude-light-card: 0.95 0.01 240;
+    --claude-light-muted: 0.50 0.04 240;
+    --claude-light-border: 0.90 0.02 240;
+
+    /* CTGAN Button Palette */
+    --ctgan-bright: 0.80 0.18 180;
+    --ctgan-dark: 0.65 0.16 180;
+
+    /* SMOTE Button Palette */
+    --smote-bright: 0.70 0.22 260;
+    --smote-dark: 0.55 0.2 260;
+
+    /* New Rich Gradient Palette */
+    --rich-1: 0.25 0.05 240; /* Slate Gray */
+    --rich-2: 0.20 0.04 245;
+    --rich-3: 0.15 0.03 250;
+    --rich-4: 0.10 0.02 255;
+    --rich-5: 0.05 0.01 260;  /* Rich Black */
+
+    /* Light Mode Theme */
+    --background: var(--claude-light-bg);
+    --foreground: var(--claude-light-fg);
+    --card: var(--claude-light-card);
+    --card-foreground: var(--claude-light-fg);
+    --primary: var(--claude-cyan);
+    --primary-foreground: var(--claude-light-fg);
+    --secondary: var(--claude-blue);
+    --secondary-foreground: var(--claude-light-fg);
+    --muted: var(--claude-light-card);
+    --muted-foreground: var(--claude-light-muted);
+    --accent: var(--claude-light-card);
+    --accent-foreground: var(--claude-light-fg);
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    --border: var(--claude-light-border);
+    --input: var(--claude-light-border);
+    --ring: var(--claude-cyan);
+    --popover: var(--claude-light-card);
+    --popover-foreground: var(--claude-light-fg);
+  }
+
+  .dark {
+    /* Claude Palette - Dark Mode */
+    --claude-cyan-bright: 0.80 0.18 180;
+    --claude-cyan-dark: 0.65 0.16 180;
+    --claude-blue-bright: 0.70 0.22 260;
+    --claude-blue-dark: 0.55 0.2 260;
+    --claude-dark-bg: 0.13 0.035 245;
+    --claude-dark-fg: 0.92 0.01 250;
+    --claude-dark-card: 0.17 0.03 245;
+    --claude-dark-muted: 0.45 0.02 245;
+    --claude-dark-border: 0.30 0.01 240;
+    /* Lighter, more gray border */
+    /* Better contrast for input borders */
+    --claude-dark-input-bg: 0.14 0.03 245;
+    /* Slightly darker than card for depth */
+
+    /* Dark Mode Theme */
+    --background: var(--claude-dark-bg);
+    --foreground: var(--claude-dark-fg);
+    --card: var(--claude-dark-card);
+    --card-foreground: var(--claude-dark-fg);
+    --primary: var(--claude-cyan-bright);
+    --primary-foreground: 0.13 0.035 245;
+    --secondary: var(--claude-blue-bright);
+    --secondary-foreground: var(--claude-dark-fg);
+    --muted: var(--claude-dark-card);
+    --muted-foreground: var(--claude-dark-muted);
+    --accent: var(--claude-dark-card);
+    --accent-foreground: var(--claude-dark-fg);
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 1 0 0;
+    --border: var(--claude-dark-border);
+    --input: var(--claude-dark-border);
+    --ring: var(--claude-cyan-bright);
+    --popover: var(--claude-dark-card);
+    --popover-foreground: var(--claude-dark-fg);
+  }
+
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+
+    body {
+      background: oklch(var(--background));
+      color: oklch(var(--foreground));
+      min-height: 100vh;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      background-color: oklch(0.14 0.03 245);
+      border-color: oklch(0.22 0.03 245);
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    textarea:focus {
+      background-color: oklch(0.15 0.03 245);
+      border-color: oklch(var(--ring));
+    }
+  }
+}

@@ -1,0 +1,44 @@
+# ======================================================
+#  AI-Related Conversational & Instructional Files
+# ======================================================
+/docs/debate_ai.md
+/docs/software_rearchitecture.md
+/instructions.md
+# /debate_ai.md
+# /GEMINI.md
+# /0.READMEs/PROJECT_INVENTORY.md
+# /0.READMEs/gcp_execution_guide_local.md
+# /0.READMEs/NVENTORY.md
+
+# ======================================================
+#  Documents & Archives
+# ======================================================
+/archive_outputs/
+/notebooks_old_no_use/
+
+
+# ======================================================
+#  Python & Project Artifacts
+# ======================================================
+__pycache__/
+*.pyc
+gdm_pipeline.egg-info/
+
+# ======================================================
+#  Virtual Environment
+# ======================================================
+.venv/
+backend/venv
+
+# ======================================================
+# Environment Variables
+# ======================================================
+.env
+
+# ======================================================
+#  Logs, Outputs & Databases
+# ======================================================
+logs/
+outputs/
+ml_pipeline/outputs/**/*.csv
+database/*.db

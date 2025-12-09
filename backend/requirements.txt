@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+joblib
+python-multipart
+pandas
+scikit-learn
+pydantic
+httpx
+gower
+SQLAlchemy
+alembic
+imbalanced-learn
+psycopg2-binary
+
+xgboost

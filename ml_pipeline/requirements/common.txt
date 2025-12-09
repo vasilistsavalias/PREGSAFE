@@ -1,0 +1,9 @@
+pandas
+numpy
+matplotlib
+seaborn
+loguru
+scikit-learn
+joblib
+openpyxl
+python-box

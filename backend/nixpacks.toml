@@ -1,0 +1,15 @@
+[phases.setup]
+nixPkgs = ["python310", "R"]
+
+[phases.install]
+cmds = [
+  "pip install -r requirements.txt",
+  "Rscript -e \"install.packages(c('plumber', 'logger', 'randomForest', 'jsonlite'), repos='https://cloud.r-project.org/')\""
+]
+
+[phases.build]
+cmds = ["echo 'Build complete'"]
+
+[start]
+cmd = "python start.py"
+

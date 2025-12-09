@@ -1,0 +1,14 @@
+# --- Color Palette for Visualizations ---
+# This file centralizes the color scheme for all generated plots to ensure
+# a consistent and professional look across the project.
+
+color_palette:
+  CTGAN: "#87CEEB"  # Sky Blue (Primary)
+  TVAE: "#76D7C4"   # Medium Aquamarine (Secondary)
+  Real_Data: "#FF7F50" # Coral (Accent)
+
+# --- Plotting Parameters ---
+figure_size: [12, 8]
+title_font_size: 16
+label_font_size: 12
+dpi: 150
